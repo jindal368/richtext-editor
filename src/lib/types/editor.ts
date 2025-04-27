@@ -30,6 +30,15 @@ export interface BlockNode {
   indent?: number;
 }
 
+export interface InlineComponent {
+  id: string;
+  type: string;
+  content: string;
+  properties: Record<string, any>;
+  blockIndex: number;
+  offset: number;
+}
+
 export interface EditorState {
   blocks: BlockNode[];
   selection: {
@@ -39,6 +48,7 @@ export interface EditorState {
   };
   undoStack: EditorState[];
   redoStack: EditorState[];
+  inlineComponents: InlineComponent[];
 }
 
 export interface EditorCommand {
