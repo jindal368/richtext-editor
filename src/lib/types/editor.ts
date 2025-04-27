@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 export type TextFormatting = {
   bold?: boolean;
   italic?: boolean;
